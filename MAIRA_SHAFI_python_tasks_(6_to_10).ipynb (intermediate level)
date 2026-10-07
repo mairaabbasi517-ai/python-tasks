@@ -1,0 +1,270 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyME0BEKiZxaFUC7j40ztL8j",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mairaabbasi517-ai/python-tasks/blob/main/MAIRA_SHAFI_python_tasks_(6_to_10).ipynb%20(intermediate%20level)\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "uEzsDxl-5kll",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "54124803-df04-4be5-a819-3e30838c117b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter total products: 3\n",
+            "Enter products name: oil\n",
+            "Enter price: 600\n",
+            "Enter quantity: 1\n",
+            "total_bill: 600.0\n",
+            "Enter products name: oil\n",
+            "Enter price: 700\n",
+            "Enter quantity: 2\n",
+            "total_bill: 2000.0\n",
+            "Enter products name: rice\n",
+            "Enter price: 5000\n",
+            "Enter quantity: 1\n",
+            "total_bill: 7000.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "#grocery shopping bill task 6\n",
+        "total_product = int(input(\"Enter total products: \"))\n",
+        "\n",
+        "total_bill = 0\n",
+        "\n",
+        "for i in range(total_product):\n",
+        "  name = input(\"Enter products name: \")\n",
+        "  price = float(input(\"Enter price: \"))\n",
+        "  quantity = int(input(\"Enter quantity: \"))\n",
+        "\n",
+        "  sub_total = price * quantity\n",
+        "  tot\n",
+        "  al_bill += sub_total\n",
+        "  print(\"total_bill:\", total_bill)\n",
+        "if total_bill >= 5000:\n",
+        "    discount : total_bill * 0.10\n",
+        "else:\n",
+        "    discount : 0\n",
+        "    final_bill = total_bill - discount\n",
+        "    print(\"discount:\", discount)\n",
+        "    print(\"final_bill:\", final_bill)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#employee weekly salary task 7\n",
+        "name = input(\"enter employee name: \")\n",
+        "hours = float(input(\"enter hours: \"))\n",
+        "rate = float(input(\"enter rate: \"))\n",
+        "\n",
+        "if hours <= 40:\n",
+        "    normal_salary = hours * rate\n",
+        "    overtime_salary = 0\n",
+        "else:\n",
+        "    normal_salary = 40 * rate\n",
+        "    overtime_hours = hours - 40\n",
+        "    overtime_salary = overtime_hours * rate * 1.5\n",
+        "\n",
+        "total_salary = normal_salary + overtime_salary\n",
+        "print(\"employee name:\", name)\n",
+        "print(\"normal salary:\", normal_salary)\n",
+        "print(\"overtime salary:\", overtime_salary)\n",
+        "print(\"total weekly salary:\", total_salary)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mNV7AE1fMEjY",
+        "outputId": "9e0f615a-c0e4-4f01-b9f3-b66c80c9d658"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter employee name: maira\n",
+            "enter hours: 48\n",
+            "enter rate: 1.5\n",
+            "employee name: maira\n",
+            "normal salary: 60.0\n",
+            "overtime salary: 18.0\n",
+            "total weekly salary: 78.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# bus seats task 8\n",
+        "available_seats = [1,2,3,4,5,6,7,8,9,10]\n",
+        "\n",
+        "seat = int(input(\"Enter seat number: \"))\n",
+        "\n",
+        "if seat in available_seats:\n",
+        "    available_seats.remove(seat)\n",
+        "    print(\"Seat booked successfully!\")\n",
+        "else:\n",
+        "    print(\"Seat already booked or invalid.\")\n",
+        "\n",
+        "print(\"Remaining available seats:\", available_seats)"
+      ],
+      "metadata": {
+        "id": "bpNiDqnBSTlh",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "12a40d68-337d-49a7-ae7d-bd60d598d37c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter seat number: 4\n",
+            "Seat booked successfully!\n",
+            "Remaining available seats: [1, 2, 3, 5, 6, 7, 8, 9, 10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#messege analyzer task 9\n",
+        "message = input(\"Enter your message: \")\n",
+        "\n",
+        "characters = len(message)\n",
+        "words = len(message.split())\n",
+        "vowels = 0\n",
+        "spaces = message.count(\" \")\n",
+        "\n",
+        "for char in message:\n",
+        "    if char.lower() in \"aeiou\":\n",
+        "        vowels += 1\n",
+        "\n",
+        "print(\"Total characters:\", characters)\n",
+        "print(\"Total words:\", words)\n",
+        "print(\"Total vowels:\", vowels)\n",
+        "print(\"Total spaces:\", spaces)\n",
+        "print(\"Uppercase message:\", message.upper())\n",
+        "\n",
+        "if \"Python\" in message:\n",
+        "    print(\"Python exists in the message\")\n",
+        "else:\n",
+        "    print(\"Python does not exist in the message\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZmHMXiUMtDu8",
+        "outputId": "28bd3098-f69f-4be1-b17a-ac96cd94b3a7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your message: i m learning python\n",
+            "Total characters: 19\n",
+            "Total words: 4\n",
+            "Total vowels: 5\n",
+            "Total spaces: 3\n",
+            "Uppercase message: I M LEARNING PYTHON\n",
+            "Python does not exist in the message\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#contact book task 10\n",
+        "contacts = {}\n",
+        "\n",
+        "while True:\n",
+        "    print(\"\\n1. Add Contact\")\n",
+        "    print(\"2. Search Contact\")\n",
+        "    print(\"3. Display All Contacts\")\n",
+        "    print(\"4. Exit\")\n",
+        "\n",
+        "    choice = input(\"Enter your choice: \")\n",
+        "\n",
+        "    if choice == \"1\":\n",
+        "        name = input(\"Enter contact name: \")\n",
+        "\n",
+        "        if name in contacts:\n",
+        "            print(\"Contact already exists!\")\n",
+        "        else:\n",
+        "            phone = input(\"Enter phone number: \")\n",
+        "            contacts[name] = phone\n",
+        "            print(\"Contact added successfully!\")\n",
+        "\n",
+        "    elif choice == \"2\":\n",
+        "        name = input(\"Enter contact name: \")\n",
+        "\n",
+        "        if name in contacts:\n",
+        "            print(\"Phone:\", contacts[name])\n",
+        "        else:\n",
+        "            print(\"Contact not found!\")\n",
+        "\n",
+        "    elif choice == \"3\":\n",
+        "        if contacts:\n",
+        "            for name, phone in contacts.items():\n",
+        "                print(name, \":\", phone)\n",
+        "        else:\n",
+        "            print(\"No contacts available.\")\n",
+        "\n",
+        "    elif choice == \"4\":\n",
+        "        print(\"Goodbye!\")\n",
+        "        break\n",
+        "\n",
+        "    else:\n",
+        "        print(\"Invalid choice!\")"
+      ],
+      "metadata": {
+        "id": "lFeT_rRpxAbk"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
